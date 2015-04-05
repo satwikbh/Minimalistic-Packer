@@ -183,6 +183,9 @@ class Packer():
                 
                 section_offset = section_table_offset + self.pe.FILE_HEADER.NumberOfSections * 0x28
                 
+                print 'section offset'
+                print hex(section_offset)
+                
                 '''
                 Now we fill the section entries manually
                 The values are constant and can be seen in the PE Section Header
@@ -253,7 +256,7 @@ def main():
     print 'Enter 1 to add' , '\n' , '2 to remove section' , '\n'
     addFlag = int(raw_input())
 
-    # why exactly this is it random or something else
+    # why exactly this, is it random or something else
     data = "\xE9\xDA\xF4\xFC\xFF\x89"
     
     try:
@@ -274,10 +277,10 @@ def main():
     
     print "\nInformation on every section after one of the added sections has been added:"
     
-    #packer.print_section_info(pe)
+    packer.print_section_info(pe)
     
     # print the just added section
-    print pe.sections[-1]
+    # print pe.sections[-1]
     
     # To check what is present in the data field
     # print int(pe.get_data(pe.sections[-1].PointerToRawData,10))
