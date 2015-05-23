@@ -1,0 +1,8 @@
+.mpx0   -->     .rsrc (Resource Section)
+.mpx1   -->     Empty Section
+.mpx2   -->     Compressed(Data_part)
+.mpx3   -->     Encrypted(Sections)
+.mpx4   -->     Decomp & Decrypt 
+
+
+OEP point to the decompression and decryption routine => it point to .mpx4

@@ -508,13 +508,8 @@ class Packer:
         # Step 1: Compress and encrypt all sections and section data except .rsrc
         self.compress_main()
         
-        # Step 2: Remove all sections
-        for each in xrange(len(self.pe.sections) - 1):
-            if self.pe.sections[0].Name[:5] == '.rsrc':
-                self.remove(1)
-            else: 
-                self.remove(0)
-        
+        self.remove(1)
+
         self.pe.write('pe.exe')
         
         self.pe = pefile.PE('pe.exe')
