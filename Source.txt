@@ -1,8 +1,3 @@
-.mpx0   -->     .rsrc (Resource Section)
-.mpx1   -->     Empty Section
-.mpx2   -->     Compressed(Data_part)
-.mpx3   -->     Encrypted(Sections)
-.mpx4   -->     Decomp & Decrypt 
-
-
-OEP point to the decompression and decryption routine => it point to .mpx4
+- `loader.py`: The Python runtime that unpacks and runs the payload.
+- `Packer.py`: The main script that compresses, encrypts, and bundles the executable.
+- `dist/`: The directory where the final packed executable is placed.
